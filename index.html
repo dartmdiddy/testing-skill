@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>YAAS Energy — Zero-Sugar Energy Drink in 5 Bold Flavors</title>
+  <meta name="description" content="Zero-sugar, 5-calorie energy drink in 5 bold flavors: Citrus Lemon, Blueberry Rush, Wild Strawberry, Solar Orange, Green Apple. No crash.">
+  <meta name="theme-color" content="#DFC821">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;900&family=Archivo+Narrow:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-flavor="lemon">
+
+  <div class="loader" id="loader" aria-hidden="true">
+    <span class="loader__word">energy</span>
+    <span class="loader__count"><b id="loaderCount">0</b>%</span>
+  </div>
+
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="YAAS home">YAAS</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#flavors">Flavors</a>
+      <a href="#why">Why YAAS</a>
+      <a href="#find">Find us</a>
+    </nav>
+    <a class="btn btn--small" href="#find">Get YAAS</a>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="hero__copy">
+        <p class="eyebrow">Zero-sugar energy drink</p>
+        <h1 class="hero__title">Say<br><span class="hero__yaas">YAAS</span><br>to energy.</h1>
+        <p class="hero__lede">Zero sugar. Just 5 calories. Five bold flavors and no crash waiting at the end of the can.</p>
+        <div class="hero__actions">
+          <a class="btn" href="#flavors">Pick your flavor</a>
+          <a class="btn btn--ghost" href="#why">Why YAAS</a>
+        </div>
+      </div>
+
+      <div class="hero__stage" aria-live="polite">
+        <div class="hero__glow"></div>
+        <div class="can can--hero" id="heroCan">
+          <span class="can__rim"></span>
+          <span class="can__brand">YAAS</span>
+          <span class="can__flavor" id="heroFlavor">Citrus Lemon</span>
+          <span class="can__facts">0 sugar · 5 cal</span>
+        </div>
+        <div class="chips" role="group" aria-label="Choose a flavor">
+          <button class="chip is-active" data-pick="lemon" aria-pressed="true"><i style="--c:#DFC821"></i>Citrus Lemon</button>
+          <button class="chip" data-pick="blueberry" aria-pressed="false"><i style="--c:#4B5BFF"></i>Blueberry Rush</button>
+          <button class="chip" data-pick="strawberry" aria-pressed="false"><i style="--c:#FF4D6D"></i>Wild Strawberry</button>
+          <button class="chip" data-pick="orange" aria-pressed="false"><i style="--c:#FF8A1F"></i>Solar Orange</button>
+          <button class="chip" data-pick="apple" aria-pressed="false"><i style="--c:#8BDB3A"></i>Green Apple</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Zero sugar</span><span>5 calories</span><span>5 bold flavors</span><span>No crash</span>
+        <span>Zero sugar</span><span>5 calories</span><span>5 bold flavors</span><span>No crash</span>
+        <span>Zero sugar</span><span>5 calories</span><span>5 bold flavors</span><span>No crash</span>
+      </div>
+    </div>
+
+    <section class="stats" aria-label="At a glance">
+      <div class="stat reveal"><strong>0<small>g</small></strong><span>Sugar</span></div>
+      <div class="stat reveal"><strong>5</strong><span>Calories per can</span></div>
+      <div class="stat reveal"><strong>5</strong><span>Bold flavors</span></div>
+    </section>
+
+    <section class="flavors" id="flavors">
+      <div class="section-head reveal">
+        <p class="eyebrow">The lineup</p>
+        <h2>Five flavors.<br>Zero compromise.</h2>
+      </div>
+
+      <div class="flavor-grid">
+        <article class="flavor reveal" data-flavor-card="lemon">
+          <div class="can can--card"><span class="can__rim"></span><span class="can__brand">YAAS</span><span class="can__flavor">Citrus Lemon</span></div>
+          <h3>Citrus Lemon</h3>
+          <p>Sharp, bright and sunny. The one that wakes everything up.</p>
+          <button class="link" data-pick="lemon">Show in hero ↑</button>
+        </article>
+        <article class="flavor reveal" data-flavor-card="blueberry">
+          <div class="can can--card"><span class="can__rim"></span><span class="can__brand">YAAS</span><span class="can__flavor">Blueberry Rush</span></div>
+          <h3>Blueberry Rush</h3>
+          <p>Deep, juicy berry with a cool finish and plenty of punch.</p>
+          <button class="link" data-pick="blueberry">Show in hero ↑</button>
+        </article>
+        <article class="flavor reveal" data-flavor-card="strawberry">
+          <div class="can can--card"><span class="can__rim"></span><span class="can__brand">YAAS</span><span class="can__flavor">Wild Strawberry</span></div>
+          <h3>Wild Strawberry</h3>
+          <p>Sweet-tart strawberry that tastes like summer without the sugar.</p>
+          <button class="link" data-pick="strawberry">Show in hero ↑</button>
+        </article>
+        <article class="flavor reveal" data-flavor-card="orange">
+          <div class="can can--card"><span class="can__rim"></span><span class="can__brand">YAAS</span><span class="can__flavor">Solar Orange</span></div>
+          <h3>Solar Orange</h3>
+          <p>Warm, zesty orange with a glow that lasts all afternoon.</p>
+          <button class="link" data-pick="orange">Show in hero ↑</button>
+        </article>
+        <article class="flavor reveal" data-flavor-card="apple">
+          <div class="can can--card"><span class="can__rim"></span><span class="can__brand">YAAS</span><span class="can__flavor">Green Apple</span></div>
+          <h3>Green Apple</h3>
+          <p>Crisp, tangy and clean, like the first bite of the day.</p>
+          <button class="link" data-pick="apple">Show in hero ↑</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="why" id="why">
+      <div class="section-head reveal">
+        <p class="eyebrow">Why YAAS</p>
+        <h2>Energy that<br>keeps its word.</h2>
+      </div>
+      <div class="why__grid">
+        <div class="why__item reveal">
+          <span class="why__num">01</span>
+          <h3>Zero sugar</h3>
+          <p>All the flavor, none of the sugar. Nothing sticky left behind.</p>
+        </div>
+        <div class="why__item reveal">
+          <span class="why__num">02</span>
+          <h3>5 calories</h3>
+          <p>A light can that fits any routine, any time of day.</p>
+        </div>
+        <div class="why__item reveal">
+          <span class="why__num">03</span>
+          <h3>No crash</h3>
+          <p>Steady lift from the first sip to the last, with no cliff afterwards.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="find" id="find">
+      <div class="find__card reveal">
+        <p class="eyebrow">Find us</p>
+        <h2>Ready for a YAAS?</h2>
+        <p>Leave your email and we will tell you where to grab a can and when new flavors land.</p>
+        <form class="signup" id="signup" novalidate>
+          <label class="sr-only" for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required>
+          <button class="btn btn--dark" type="submit">Notify me</button>
+        </form>
+        <p class="signup__msg" id="signupMsg" role="status"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="wordmark" href="#top" aria-label="Back to top">YAAS</a>
+    <p>Zero-sugar energy drink in 5 bold flavors.</p>
+    <p class="small">&copy; <span id="year">2026</span> YAAS. Recreated demo site.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
